@@ -17,6 +17,7 @@ class BuffaloDetails extends StatelessWidget {
   TextEditingController seedingdateController = new TextEditingController();
   TextEditingController charaController = new TextEditingController();
   TextEditingController milkingController = new TextEditingController();
+  TextEditingController medicineController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +66,10 @@ class BuffaloDetails extends StatelessWidget {
             textEditingController: milkingController,
             hint: 'Milking',
           ),
+          LabelsBox(
+            textEditingController: medicineController,
+            hint: 'Medicine',
+          ),
           Buttons(
             label: 'Add',
             color: Colors.blue[600],
@@ -77,7 +82,8 @@ class BuffaloDetails extends StatelessWidget {
                   food: foodController.text,
                   seedingDate: seedingdateController.text,
                   chara: charaController.text,
-                  milking: milkingController.text);
+                  milking: milkingController.text,
+                  medicine: medicineController.text);
               Navigator.push(
                   context,
                   MaterialPageRoute(

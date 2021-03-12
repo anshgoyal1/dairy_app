@@ -7,6 +7,7 @@ class BuffaloData {
   String seedingDate;
   String chara;
   String milking;
+  String medicine;
 
   BuffaloData(
       {this.id,
@@ -16,5 +17,6 @@ class BuffaloData {
       this.food,
       this.seedingDate,
       this.chara,
-      this.milking});
+      this.milking,
+      this.medicine});
 }

@@ -7,6 +7,7 @@ class Data {
   String seedingDate;
   String chara;
   String milking;
+  String medicine;
 
   Data(
       {this.id,
@@ -16,5 +17,6 @@ class Data {
       this.food,
       this.seedingDate,
       this.chara,
-      this.milking});
+      this.milking,
+      this.medicine});
 }

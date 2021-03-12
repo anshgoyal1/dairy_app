@@ -35,7 +35,7 @@ class WelcomePage extends StatelessWidget {
                   iconName: 'Cow \nList',
                 ),
                 SizedBox(
-                  width: 55.0,
+                  width: 30.0,
                 ),
                 IconGadget(
                   onPress: () {

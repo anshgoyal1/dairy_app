@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import '../lists/cow_data.dart';
 
-
 // ignore: must_be_immutable
 class CowDetails extends StatelessWidget {
   TextEditingController idController = new TextEditingController();
@@ -16,6 +15,7 @@ class CowDetails extends StatelessWidget {
   TextEditingController seedingdateController = new TextEditingController();
   TextEditingController charaController = new TextEditingController();
   TextEditingController milkingController = new TextEditingController();
+  TextEditingController medController = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -64,23 +64,31 @@ class CowDetails extends StatelessWidget {
             textEditingController: milkingController,
             hint: 'Milking',
           ),
+          LabelsBox(
+            textEditingController: medController,
+            hint: 'Medicine',
+          ),
           Buttons(
             label: 'Add',
             color: Colors.blue[600],
             onPress: () {
               final dataTo = Data(
-                  id: idController.text,
-                  birthDate: birthdateController.text,
-                  morningMilk: morningmilkController.text,
-                  eveningMilk: eveningmilkController.text,
-                  food: foodController.text,
-                  seedingDate: seedingdateController.text,
-                  chara: charaController.text,
-                  milking: milkingController.text);
+                id: idController.text,
+                birthDate: birthdateController.text,
+                morningMilk: morningmilkController.text,
+                eveningMilk: eveningmilkController.text,
+                food: foodController.text,
+                seedingDate: seedingdateController.text,
+                chara: charaController.text,
+                milking: milkingController.text,
+                medicine: medController.text,
+              );
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ListPageCow(data: dataTo,)));
+                      builder: (context) => ListPageCow(
+                            data: dataTo,
+                          )));
             },
           )
         ],
